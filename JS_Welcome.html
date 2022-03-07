@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome message using current time</title>
+    <script>
+        var name;
+        var now = new Date(); // gives current date & time
+        var hour = now.getHours(); // current hour (0-23)
+
+        name = window.prompt("Enter your name");
+        // Determine whether it is morning
+        if (hour < 12)
+            document.write("<h1>Good morning, ");
+        // Determine whether the time is PM
+        if (hour >= 12) {
+            // Convert to a 12-hour clock
+            hour = hour - 12;
+
+            // Determine whether it is before 6 PM
+            if (hour < 6);
+            document.write("<h1> Afternoon, ");
+            // Determine whether it is after 6 PM
+            if (hour >= 6) document.write("<h1>Good Evening, ");
+        } // end if
+        document.writeln(name + " welcome to Javascript Programming");
+    </script>
+</head>
+
+<body></body>
+
+</html>
