@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Counter</title>
+    <script>
+        var total; //sum of grades
+        var gradeCounter; // number of grades entered
+        var grade; // grade typed by user (as a string)
+        var gradeValue; // grade value (converted to integer)
+        var average; //average of all grades
+
+        // Initialization phase
+        total = 0;
+        gradeCounter = 0;
+        
+        // Prompt user for grades
+        while (gradeValue != -1)
+            {
+                grade = window.prompt("Enter Integer Grade, -1 to Quit:", "0");
+                gradeValue = parseInt(grade);
+                total = total + gradeValue;
+                gradeCounter++;
+            }
+
+        // Calculates average and prints
+        if (gradeCounter != 0)
+        {
+           average = total/gradeCounter;
+           document.writeln("<h1>The class average is " + average);
+        }
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
