@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Charges</title>
+    <script>
+        function getCharges()
+        {
+            var priceField = document.getElementById(priceField);
+            var ticketField = document.getElementById(ticketFIeld);
+            var currentCharge = document.getElementById(currentCharge);
+
+            var price = parseFloat(priceField.value);
+            var ticket = parseFloat(ticketField.value);
+            var fee = calculateCharges(price,ticket);
+        }
+
+        function calculateCharges()
+        {
+            var charge = price * tickets;
+            return charge;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
