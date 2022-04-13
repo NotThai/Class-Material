@@ -8,16 +8,17 @@
     <script>
         function getCharges()
         {
-            var priceField = document.getElementById(priceField);
-            var ticketField = document.getElementById(ticketFIeld);
-            var currentCharge = document.getElementById(currentCharge);
+            var priceField = document.getElementById("priceField");
+            var ticketField = document.getElementById("ticketField");
+            var currentCharge = document.getElementById("currentCharge");
 
             var price = parseFloat(priceField.value);
-            var ticket = parseFloat(ticketField.value);
-            var fee = calculateCharges(price,ticket);
+            var tickets = parseFloat(ticketField.value);
+            var fee = calculateCharges(price,tickets);
+
         }
 
-        function calculateCharges()
+        function calculateCharges(price,tickets)
         {
             var charge = price * tickets;
             return charge;
@@ -25,6 +26,19 @@
     </script>
 </head>
 <body>
-    
+    <div class = "login-page">
+        <div class = "form">
+            <form action="#" method = post id = "form1">
+            <label>No. of tickets</label>
+            <input type = "number" id = "ticketField" name = "ticketField" min = "0" max ="" required size = "20"
+                maxlength="30">
+            <label>Price per ticket</label>
+            <input type = "number step .01" id = "priceField" name = "priceField" min ="0" max =""
+                required size = "10" maxlength="20">
+            <button type = "button" onclick="getCharges()">Charges</button>
+        </form> 
+        </div>
+    </div>
+    <p id ="totalCharges"></p>
 </body>
 </html>
