@@ -15,6 +15,7 @@
             var price = parseFloat(priceField.value);
             var tickets = parseFloat(ticketField.value);
             var fee = calculateCharges(price,tickets);
+            document.getElementById("totalCharges").innerHTML = fee;
 
         }
 
